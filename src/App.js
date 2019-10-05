@@ -3,11 +3,13 @@ import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import axios from 'axios'
 import Question from './components/Question'
+import Answer from './components/Answer'
 
 function App() {
   const [question, setQuestion] = useState(0)
   const [questions, setQuestions] = useState([])
   const [answer, setAnswer] = useState(0)
+  const [displayAnswer, setDisplayAnswers] = useState(false)
   
   useEffect( () => {
     const fetchData = async () => {
@@ -43,13 +45,11 @@ function App() {
     )
   }
   
-  const displayQuestion = () => {
+  const quiz = () => {
     
-    const back = () => {
-      setQuestion(question-1)
-    }
     const forward = () => {
       setQuestion(question+1)
+      setDisplayAnswers(false)
     }
     const submit = async () => {
       const average = (arr) => {
@@ -57,23 +57,22 @@ function App() {
       }
       const id = questions[question-1].id
       const object = questions.find( x => x.id === id)
-      const newObject = {...object, answers: object.answers.concat(answer), average: average(object.answers)}
+      const newObject = {...object, answers: object.answers.concat(answer), average: average(object.answers), currentAnswer: answer}
       await axios.put(`http://localhost:3000/questions/${id}`, newObject)
       setQuestions(questions.map( x => x.id === id ? newObject : x))
+      setDisplayAnswers(true)
       setAnswer(0)
-      setQuestion(question+1)
     }
-  
+
     const handleAnswerChange = (event) => {
       event.preventDefault()
       console.log(answer)
       setAnswer(event.target.value)
     }
 
-    return (
+    const displayQuestion = () => (
       <div>
         <Question 
-        back={back}
         forward={forward}
         question={questions[question-1]}
         handleAnswerChange={handleAnswerChange}
@@ -82,14 +81,28 @@ function App() {
         />
       </div>
     )
-  }
 
-  const displayResults = () => {
+    const displayResult = () => (
+      <div>
+        <Answer
+        forward={forward}
+        question={questions[question-1]}
+        />
+      </div>
+    )
+
     return (
       <div>
-        <h4>Congratulations on completing the quiz! These are your results:</h4>
-        <p>Placeholder for results</p>
-        <button onClick={() => setQuestion(0)}>Retake the quiz?</button>
+        {displayAnswer === false ? displayQuestion() : displayResult()}
+      </div>
+    )
+  }
+
+  const endPage = (score) => {
+    return (
+      <div className="box-container" >
+      <h1>Thanks for playing</h1>
+      <button className="button-start" onClick={() => setQuestion(0)}>Play again</button>
       </div>
     )
   }
@@ -100,7 +113,7 @@ function App() {
         <h1>What most people think?</h1>
       </header>
       {question === 0 ? startQuiz() : 
-      question > 0 && question < questions.length + 1 ? displayQuestion() : displayResults()}
+      question > 0 && question < questions.length + 1 ? quiz() : endPage()}
     </div>
   );
 }

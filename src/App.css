@@ -29,20 +29,22 @@ input {
 .box-container {
   display: flex;
   flex-direction: column;
-  margin: 0 20em;
+  justify-content: space-around;
+  margin: 0 10em;
+  width: auto;
+  height: 100%;
 }
 
 .collumn {
   display: flex;
   flex-direction: column;
   align-items: space-around;
-  height: 100%;
   width: 100%;
 }
 
 .row {
   align-self: auto;
-  height: 25vmin;
+  height: auto;
   justify-content: space-around;
 }
 
@@ -100,4 +102,10 @@ input {
 .back-button:hover {
   background-color: black; /* Green */
   color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .box-container {
+    margin: 0 0;
+  }
 }
