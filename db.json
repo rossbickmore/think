@@ -1,53 +1,119 @@
-{ 
+{
   "questions": [
     {
-      "number": 1,
-      "question": "How many people have climbed everest?",
-      "answers": []
+      "id": 1,
+      "question": "How many people have climbed to the summit of Everest?",
+      "answers": [
+        "2000",
+        "10",
+        "2000",
+        "5454",
+        0,
+        "2000",
+        "4000"
+      ],
+      "average": 1910.6666666666667,
+      "correctAnswer": 4000
     },
     {
-      "number": 2,
-      "question": "How many people have climbed everest?",
-      "answers": []
+      "id": 2,
+      "question": "How many billionaires are there in the world (as of 2019)?",
+      "answers": [
+        0,
+        "5000",
+        "3000",
+        0,
+        "300"
+      ],
+      "average": 2000,
+      "correctAnswer": 2153
     },
     {
-      "number": 3,
-      "question": "How many people have climbed everest?",
-      "answers": []
+      "id": 3,
+      "question": "How many years does it take a space-shuttle to get to Mars?",
+      "answers": [
+        "4000",
+        "150",
+        0,
+        "140"
+      ],
+      "average": 1383.3333333333333,
+      "correctAnswer": 150
     },
     {
-      "number": 4,
-      "question": "How many people have climbed everest?",
-      "answers": []
+      "id": 4,
+      "question": "What is the hottest temperature (degrees celsius) ever recorded on earth?",
+      "answers": [
+        "60",
+        "60"
+      ],
+      "average": 60,
+      "correctAnswer": 57
     },
     {
-      "number": 5,
-      "question": "How many people have climbed everest?",
-      "answers": []
+      "id": 5,
+      "question": "How many days can you go without water?",
+      "answers": [
+        "4",
+        "5"
+      ],
+      "average": 4,
+      "correctAnswer": 4
     },
     {
-      "number": 6,
-      "question": "How many people have climbed everest?",
-      "answers": []
+      "id": 6,
+      "question": "How many calories in a banana?",
+      "answers": [
+        "100",
+        "100"
+      ],
+      "average": 100,
+      "correctAnswer": 89
     },
     {
-      "number": 7,
-      "question": "How many people have climbed everest?",
-      "answers": []
+      "id": 7,
+      "question": "How long do cats live for?",
+      "answers": [
+        "15",
+        "12"
+      ],
+      "average": 15,
+      "correctAnswer": 89
     },
     {
-      "number": 8,
-      "question": "How many people have climbed everest?",
-      "answers": []
+      "id": 8,
+      "question": "How many times does ireland fit into australia?",
+      "answers": [
+        "50",
+        "200"
+      ],
+      "average": 50,
+      "correctAnswer": 110
     },
     {
-      "number": 9,
-      "question": "How many people have climbed everest?",
-      "answers": []
+      "id": 9,
+      "question": "How many countries in the world?",
+      "answers": [
+        "190",
+        "120",
+        "250",
+        "50",
+        "200",
+        "100"
+      ],
+      "correctAnswer": 195,
+      "average": 162
     },
     {
-      "number": 10,
-      "question": "How many people have climbed everest?",
-      "answers": []
+      "id": 10,
+      "question": "how many people have walked on the moon?",
+      "answers": [
+        "15",
+        "5",
+        "5"
+      ],
+      "average": 10,
+      "correctAnswer": 13
     }
-]}
+  ]
+}

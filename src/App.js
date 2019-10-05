@@ -7,6 +7,7 @@ import Question from './components/Question'
 function App() {
   const [question, setQuestion] = useState(0)
   const [questions, setQuestions] = useState([])
+  const [answer, setAnswer] = useState(0)
   
   useEffect( () => {
     const fetchData = async () => {
@@ -20,18 +21,24 @@ function App() {
 
   const startQuiz = () => {
     return (
-      <div>
-       <h4>How to play:</h4>
-       <p>The game is not to guess the correct answer but to guess the answer that most people think! 
-       We will compare your answers to the average from the population. 
-       </p>
-       <h4>Scoring:</h4>
-       <ul>
-          <li> Within 1% of the average: 10pts</li>
-          <li> Within 10% of the average: 5pts</li>
-          <li> Within 25% of the average: 1pts</li>
-       </ul>
-       <button class="start-button" onClick={() => setQuestion(1)}> Start the quiz!</button>
+      <div className="collumn">
+        <div className="row">
+          <h2>How to play:</h2>
+          <p>The game is not to guess the correct answer but to guess the answer that most people think! 
+          We will compare your answers to the average from the population. 
+          </p>
+        </div>
+        <div className="row">
+          <h2>Scoring:</h2>
+          <ul>
+              <li> Within 1% of the average: 10pts</li>
+              <li> Within 10% of the average: 5pts</li>
+              <li> Within 25% of the average: 1pts</li>
+          </ul>
+        </div>
+        <div className="row">
+          <button className="start-button" onClick={() => setQuestion(1)}> Start the quiz!</button>
+        </div>
       </div>
     )
   }
@@ -41,16 +48,37 @@ function App() {
     const back = () => {
       setQuestion(question-1)
     }
-  
     const forward = () => {
       setQuestion(question+1)
     }
+    const submit = async () => {
+      const average = (arr) => {
+        return (arr.map( x => parseInt(x)).reduce( (a,b) => a + b))/(arr.length)
+      }
+      const id = questions[question-1].id
+      const object = questions.find( x => x.id === id)
+      const newObject = {...object, answers: object.answers.concat(answer), average: average(object.answers)}
+      await axios.put(`http://localhost:3000/questions/${id}`, newObject)
+      setQuestions(questions.map( x => x.id === id ? newObject : x))
+      setAnswer(0)
+      setQuestion(question+1)
+    }
+  
+    const handleAnswerChange = (event) => {
+      event.preventDefault()
+      console.log(answer)
+      setAnswer(event.target.value)
+    }
+
     return (
       <div>
         <Question 
         back={back}
         forward={forward}
         question={questions[question-1]}
+        handleAnswerChange={handleAnswerChange}
+        submit={submit}
+        answer={answer}
         />
       </div>
     )
@@ -67,7 +95,7 @@ function App() {
   }
 
   return (
-    <div class="box-container" >
+    <div className="box-container" >
       <header>
         <h1>What most people think?</h1>
       </header>

@@ -18,84 +18,86 @@ header {
   justify-content: space-around;
 }
 
+
+input {
+  width: 50%;
+  text-align: center;
+  border: none;
+  font-size: 1.5em;
+}
+
 .box-container {
   display: flex;
   flex-direction: column;
   margin: 0 20em;
 }
 
-.Question {
-  display: block;
-  flex-direction: column;
-  line-height: normal;
-}
-
-.button-box {
+.collumn {
   display: flex;
-  justify-content: space-between;
-  padding-top: 1em;
-}
-
-.input-field {
+  flex-direction: column;
+  align-items: space-around;
+  height: 100%;
   width: 100%;
 }
 
-input {
-  width: 50%;
+.row {
+  align-self: auto;
+  height: 25vmin;
+  justify-content: space-around;
 }
-
 
 .answer-button {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
-  background-color: white; 
-  color: black; 
-  border: 2px solid #4CAF50;
+  background-color: grey;
+  color: white; 
+  font-size: 1.5em;
+  border-radius: 10%;
 }
 
 .answer-button:hover {
-  background-color: #4CAF50; /* Green */
+  background-color: black; /* Green */
   color: white;
 }
 
 .start-button {
   -webkit-transition-duration: 1s; /* Safari */
   transition-duration: 0.4s;
-  background-color: #f44336; 
+  background-color: grey; 
   color: white; 
   font-size: 2em;
   width: 100%;
 }
 
 .start-button:hover {
-  background-color: green; /* Green */
+  background-color: black; /* Green */
   color: white;
 }
 
 .skip-button {
   -webkit-transition-duration: 1s; /* Safari */
   transition-duration: 0.4s;
-  background-color: green; 
+  background-color: grey; 
   color: white; 
   font-size: 1em;
   width: 7em;
 }
 
 .skip-button:hover {
-  background-color: grey; /* Green */
+  background-color: black; /* Green */
   color: white;
 }
 
 .back-button {
   -webkit-transition-duration: 1s; /* Safari */
   transition-duration: 0.4s;
-  background-color: #f44336; 
+  background-color: grey; 
   color: white; 
   font-size: 1em;
   width: 7em;
 }
 
 .back-button:hover {
-  background-color: grey; /* Green */
+  background-color: black; /* Green */
   color: white;
 }
