@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import axios from 'axios'
 import Question from './components/Question'
 import Answer from './components/Answer'
@@ -23,7 +22,7 @@ function App() {
 
   const startQuiz = () => {
     return (
-      <div className="collumn">
+      <div className="card">
         <div className="row">
           <h2>How to play:</h2>
           <p>The game is not to guess the correct answer but to guess the answer that most people think! 
@@ -33,9 +32,9 @@ function App() {
         <div className="row">
           <h2>Scoring:</h2>
           <ul>
-              <li> Within 1% of the average: 10pts</li>
-              <li> Within 10% of the average: 5pts</li>
-              <li> Within 25% of the average: 1pts</li>
+              <li> Within 10% of the average: 10pts</li>
+              <li> Within 25% of the average: 5pts</li>
+              <li> Within 50% of the average: 1pts</li>
           </ul>
         </div>
         <div className="row">
@@ -51,13 +50,34 @@ function App() {
       setQuestion(question+1)
       setDisplayAnswers(false)
     }
+
     const submit = async () => {
       const average = (arr) => {
         return (arr.map( x => parseInt(x)).reduce( (a,b) => a + b))/(arr.length)
       }
+      const score = (answer, average) => {
+        let diff = Math.abs(answer-average)
+        let percentdiff = (diff / average)*100
+
+        if (percentdiff < 10) {
+            return 10
+        } else if (percentdiff < 25) {
+            return 5
+        } else if (percentdiff < 50) {
+          return 1
+        } else {
+          return 0
+        }
+      }
       const id = questions[question-1].id
       const object = questions.find( x => x.id === id)
-      const newObject = {...object, answers: object.answers.concat(answer), average: average(object.answers), currentAnswer: answer}
+      const newObject = {
+        ...object, 
+        answers: object.answers.concat(answer),
+        average: average(object.answers),
+        currentAnswer: answer,
+        currentScore: score(answer, average(object.answers))
+      }
       await axios.put(`http://localhost:3000/questions/${id}`, newObject)
       setQuestions(questions.map( x => x.id === id ? newObject : x))
       setDisplayAnswers(true)
@@ -98,11 +118,17 @@ function App() {
     )
   }
 
-  const endPage = (score) => {
+  const endPage = () => {
+
+    const countScore = (arr) => {
+      return arr.reduce((a, b) => +a + +b.currentScore, 0);
+    }
+
     return (
-      <div className="box-container" >
-      <h1>Thanks for playing</h1>
-      <button className="button-start" onClick={() => setQuestion(0)}>Play again</button>
+      <div className="card" >
+      <h3>You scored {countScore(questions)} points!</h3>
+      <h3>Thanks for playing</h3>
+      <button className="start-button" onClick={() => setQuestion(0)}>Play again</button>
       </div>
     )
   }

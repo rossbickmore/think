@@ -19,12 +19,24 @@
         "50",
         "2000",
         "2000",
-        "200"
+        "200",
+        0,
+        "400",
+        "500",
+        "4000",
+        "2000",
+        "1500",
+        "900",
+        "800",
+        0,
+        "900",
+        "1000"
       ],
-      "currentAnswer": "200",
-      "average": 817,
+      "currentAnswer": "1000",
+      "average": 902.1153846153846,
       "correctAnswer": 4000,
-      "src": "https://cdn.pixabay.com/photo/2017/03/15/13/27/rough-horn-2146181_960_720.jpg"
+      "src": "https://cdn.pixabay.com/photo/2017/03/15/13/27/rough-horn-2146181_960_720.jpg",
+      "currentScore": 5
     },
     {
       "id": 2,
@@ -37,12 +49,19 @@
         "2000",
         "3000",
         "5000",
-        "5000"
+        "5000",
+        "1500",
+        "4000",
+        "2000",
+        0,
+        "2000",
+        "3000"
       ],
-      "currentAnswer": "5000",
-      "average": 1524.4285714285713,
+      "currentAnswer": "3000",
+      "average": 1936.2307692307693,
       "correctAnswer": 2153,
-      "src": "https://cdn.pixabay.com/photo/2017/03/27/21/31/money-2180330_960_720.jpg"
+      "src": "https://cdn.pixabay.com/photo/2017/03/27/21/31/money-2180330_960_720.jpg",
+      "currentScore": 0
     },
     {
       "id": 3,
@@ -50,12 +69,18 @@
       "answers": [
         2,
         3,
+        "100",
+        "150",
+        "30",
+        0,
+        "100",
         "100"
       ],
       "currentAnswer": "100",
-      "average": 2.5,
+      "average": 55,
       "correctAnswer": 150,
-      "src": "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg"
+      "src": "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg",
+      "currentScore": 0
     },
     {
       "id": 4,
@@ -63,12 +88,18 @@
       "answers": [
         2,
         3,
-        "60"
+        "60",
+        "60",
+        "50",
+        0,
+        "60",
+        "50"
       ],
-      "currentAnswer": "60",
-      "average": 2.5,
+      "currentAnswer": "50",
+      "average": 33.57142857142857,
       "correctAnswer": 57,
-      "src": "https://cdn.pixabay.com/photo/2017/03/29/15/18/tianjin-2185510_960_720.jpg"
+      "src": "https://cdn.pixabay.com/photo/2017/03/29/15/18/tianjin-2185510_960_720.jpg",
+      "currentScore": 1
     },
     {
       "id": 5,
@@ -76,72 +107,102 @@
       "answers": [
         2,
         3,
-        "4"
+        "4",
+        "4",
+        0,
+        "10",
+        "6"
       ],
-      "currentAnswer": "4",
-      "average": 2.5,
+      "currentAnswer": "6",
+      "average": 3.8333333333333335,
       "correctAnswer": 4,
-      "src": "https://cdn.pixabay.com/photo/2015/09/12/21/09/man-937384_960_720.jpg"
+      "src": "https://cdn.pixabay.com/photo/2015/09/12/21/09/man-937384_960_720.jpg",
+      "currentScore": 0
     },
     {
       "id": 6,
       "question": "How many calories in a banana?",
       "answers": [
         2,
-        3
+        3,
+        "200",
+        0,
+        "200",
+        "100"
       ],
-      "currentAnswer": "",
-      "average": 68,
+      "currentAnswer": "100",
+      "average": 81,
       "correctAnswer": 89,
-      "src": "https://cdn.pixabay.com/photo/2015/03/30/12/43/bananas-698608_960_720.jpg"
+      "src": "https://cdn.pixabay.com/photo/2015/03/30/12/43/bananas-698608_960_720.jpg",
+      "currentScore": 5
     },
     {
       "id": 7,
       "question": "How long do cats live for?",
       "answers": [
         2,
-        3
+        3,
+        "7",
+        0,
+        "15",
+        "15"
       ],
-      "currentAnswer": "",
-      "average": 6,
+      "currentAnswer": "15",
+      "average": 5.4,
       "correctAnswer": 89,
-      "src": "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_960_720.jpg"
+      "src": "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_960_720.jpg",
+      "currentScore": 0
     },
     {
       "id": 8,
       "question": "How many times does ireland fit into australia?",
       "answers": [
         2,
-        3
+        3,
+        "110",
+        0,
+        "100",
+        "100"
       ],
-      "currentAnswer": "",
-      "average": 42.22222222222222,
+      "currentAnswer": "100",
+      "average": 43,
       "correctAnswer": 110,
-      "src": "https://cdn.pixabay.com/photo/2012/10/25/23/05/australia-62823_960_720.jpg"
+      "src": "https://cdn.pixabay.com/photo/2012/10/25/23/05/australia-62823_960_720.jpg",
+      "currentScore": 0
     },
     {
       "id": 9,
       "question": "How many countries in the world?",
       "answers": [
         2,
-        3
+        3,
+        "200",
+        0,
+        "200",
+        "150"
       ],
-      "currentAnswer": "",
+      "currentAnswer": "150",
       "correctAnswer": 195,
-      "average": 90.84615384615384,
-      "src": "https://cdn.pixabay.com/photo/2011/12/13/17/07/earth-11048_960_720.jpg"
+      "average": 81,
+      "src": "https://cdn.pixabay.com/photo/2011/12/13/17/07/earth-11048_960_720.jpg",
+      "currentScore": 0
     },
     {
       "id": 10,
       "question": "how many people have walked on the moon?",
       "answers": [
         2,
-        3
+        3,
+        "70",
+        0,
+        "10",
+        "10"
       ],
-      "currentAnswer": "",
-      "average": 5.5,
+      "currentAnswer": "10",
+      "average": 17,
       "correctAnswer": 13,
-      "src": "https://cdn.pixabay.com/photo/2016/07/19/04/40/moon-1527501_960_720.jpg"
+      "src": "https://cdn.pixabay.com/photo/2016/07/19/04/40/moon-1527501_960_720.jpg",
+      "currentScore": 1
     }
   ]
 }

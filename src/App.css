@@ -25,7 +25,7 @@ img {
 
 input {
   width: 50%;
-  text-align: center;
+  text-align: right;
   border: none;
   font-size: 1.5em;
 }
@@ -116,6 +116,13 @@ input {
 .back-button:hover {
   background-color: black; /* Green */
   color: white;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .box-container {
+    margin: 0 5em;
+  }
 }
 
 @media only screen and (max-width: 600px) {

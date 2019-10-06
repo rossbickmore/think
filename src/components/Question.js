@@ -14,7 +14,7 @@ const Question = ({back, forward, question , handleAnswerChange, submit, answer}
                 <input type="number" min="0"
                      value={answer} onChange={handleAnswerChange}/>
                 <button className="answer-button" onClick={submit}>
-                <FontAwesomeIcon icon={faPaperPlane} /> submit
+                <FontAwesomeIcon icon={faPaperPlane} />
                 </button>
             </div>
             <img itemprop="contentURL" src={question.src} alt={question.src}></img>
