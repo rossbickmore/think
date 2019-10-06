@@ -5,7 +5,7 @@ import '../App.css';
 
 const Question = ({back, forward, question , handleAnswerChange, submit, answer}) => {
     return (
-        <div className="collumn">
+        <div className="card">
             <div className="row">
                 <h2>Question {question.id}</h2>
                 <h3>{question.question}</h3>
@@ -17,6 +17,7 @@ const Question = ({back, forward, question , handleAnswerChange, submit, answer}
                 <FontAwesomeIcon icon={faPaperPlane} /> submit
                 </button>
             </div>
+            <img itemprop="contentURL" src={question.src} alt={question.src}></img>
         </div>
     );
 };

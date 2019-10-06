@@ -18,6 +18,10 @@ header {
   justify-content: space-around;
 }
 
+img {
+  height: 50vmin;
+  width: auto;
+}
 
 input {
   width: 50%;
@@ -30,22 +34,32 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 0 10em;
+  margin: 0 20em;
   width: auto;
   height: 100%;
 }
 
-.collumn {
+.card {
   display: flex;
   flex-direction: column;
   align-items: space-around;
-  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 20px 20px;
+  height: auto;
+  justify-content: center;
+  padding: 10px 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .row {
   align-self: auto;
   height: auto;
   justify-content: space-around;
+  padding: 10px 10px;
 }
 
 .answer-button {
@@ -82,7 +96,7 @@ input {
   background-color: grey; 
   color: white; 
   font-size: 1em;
-  width: 7em;
+  width: 100%;
 }
 
 .skip-button:hover {
