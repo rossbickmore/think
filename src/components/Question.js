@@ -1,9 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faForward, faBackward, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
+import {faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 import '../App.css';
 
-const Question = ({back, forward, question , handleAnswerChange, submit, answer}) => {
+const Question = ({question , handleAnswerChange, submit, answer}) => {
     return (
         <div className="card">
             <div className="row">

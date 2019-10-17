@@ -30,13 +30,17 @@
         "800",
         0,
         "900",
-        "1000"
+        "1000",
+        "300",
+        "1000",
+        "850",
+        "2000"
       ],
-      "currentAnswer": "1000",
-      "average": 902.1153846153846,
+      "currentAnswer": "2000",
+      "average": 886.8333333333334,
       "correctAnswer": 4000,
       "src": "https://cdn.pixabay.com/photo/2017/03/15/13/27/rough-horn-2146181_960_720.jpg",
-      "currentScore": 5
+      "currentScore": 0
     },
     {
       "id": 2,
@@ -55,13 +59,16 @@
         "2000",
         0,
         "2000",
+        "3000",
+        "133",
+        "4000",
         "3000"
       ],
       "currentAnswer": "3000",
-      "average": 1936.2307692307693,
+      "average": 2019,
       "correctAnswer": 2153,
       "src": "https://cdn.pixabay.com/photo/2017/03/27/21/31/money-2180330_960_720.jpg",
-      "currentScore": 0
+      "currentScore": 1
     },
     {
       "id": 3,
@@ -74,10 +81,11 @@
         "30",
         0,
         "100",
-        "100"
+        "100",
+        "800"
       ],
-      "currentAnswer": "100",
-      "average": 55,
+      "currentAnswer": "800",
+      "average": 60.625,
       "correctAnswer": 150,
       "src": "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg",
       "currentScore": 0
@@ -93,13 +101,14 @@
         "50",
         0,
         "60",
-        "50"
+        "50",
+        "114"
       ],
-      "currentAnswer": "50",
-      "average": 33.57142857142857,
+      "currentAnswer": "114",
+      "average": 35.625,
       "correctAnswer": 57,
       "src": "https://cdn.pixabay.com/photo/2017/03/29/15/18/tianjin-2185510_960_720.jpg",
-      "currentScore": 1
+      "currentScore": 0
     },
     {
       "id": 5,
@@ -111,10 +120,11 @@
         "4",
         0,
         "10",
-        "6"
+        "6",
+        "2"
       ],
-      "currentAnswer": "6",
-      "average": 3.8333333333333335,
+      "currentAnswer": "2",
+      "average": 4.142857142857143,
       "correctAnswer": 4,
       "src": "https://cdn.pixabay.com/photo/2015/09/12/21/09/man-937384_960_720.jpg",
       "currentScore": 0
@@ -128,10 +138,11 @@
         "200",
         0,
         "200",
+        "100",
         "100"
       ],
       "currentAnswer": "100",
-      "average": 81,
+      "average": 84.16666666666667,
       "correctAnswer": 89,
       "src": "https://cdn.pixabay.com/photo/2015/03/30/12/43/bananas-698608_960_720.jpg",
       "currentScore": 5
@@ -145,10 +156,11 @@
         "7",
         0,
         "15",
-        "15"
+        "15",
+        "20"
       ],
-      "currentAnswer": "15",
-      "average": 5.4,
+      "currentAnswer": "20",
+      "average": 7,
       "correctAnswer": 89,
       "src": "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_960_720.jpg",
       "currentScore": 0
@@ -162,10 +174,11 @@
         "110",
         0,
         "100",
-        "100"
+        "100",
+        "600"
       ],
-      "currentAnswer": "100",
-      "average": 43,
+      "currentAnswer": "600",
+      "average": 52.5,
       "correctAnswer": 110,
       "src": "https://cdn.pixabay.com/photo/2012/10/25/23/05/australia-62823_960_720.jpg",
       "currentScore": 0
@@ -179,11 +192,12 @@
         "200",
         0,
         "200",
-        "150"
+        "150",
+        "168"
       ],
-      "currentAnswer": "150",
+      "currentAnswer": "168",
       "correctAnswer": 195,
-      "average": 81,
+      "average": 92.5,
       "src": "https://cdn.pixabay.com/photo/2011/12/13/17/07/earth-11048_960_720.jpg",
       "currentScore": 0
     },
@@ -196,13 +210,14 @@
         "70",
         0,
         "10",
-        "10"
+        "10",
+        "16"
       ],
-      "currentAnswer": "10",
-      "average": 17,
+      "currentAnswer": "16",
+      "average": 15.833333333333334,
       "correctAnswer": 13,
       "src": "https://cdn.pixabay.com/photo/2016/07/19/04/40/moon-1527501_960_720.jpg",
-      "currentScore": 1
+      "currentScore": 10
     }
   ]
 }
