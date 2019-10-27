@@ -15,12 +15,12 @@ function App() {
   const [answer, setAnswer] = useState(0);
   const [displayAnswer, setDisplayAnswers] = useState(false);
 
-  const url = 'http://localhost:3001/questions/';
+  const baseUrl = '/api/questions/';
 
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        url,
+        baseUrl,
       );
       setQuestions(result.data);
     };
@@ -66,7 +66,7 @@ function App() {
         currentAnswer: answer,
         currentScore: score(answer, average(object.answers)),
       };
-      await axios.put(url + id, newObject);
+      await axios.put(baseUrl + id, newObject);
       setQuestions(questions.map((x) => (x.id === id ? newObject : x)));
       setDisplayAnswers(true);
       setAnswer(0);
