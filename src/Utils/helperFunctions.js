@@ -1,4 +1,3 @@
-
 export const average = (arr) => {
   return (arr.map((x) => parseInt(x)).reduce((a, b) => a + b)) / (arr.length);
 };
